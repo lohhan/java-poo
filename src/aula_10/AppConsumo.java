@@ -47,6 +47,6 @@ public class AppConsumo {
         for(int i=0; i<consArray.length; i++) {
             System.out.println(consArray[i]);
         }
-
+        input.close();
     }
 }

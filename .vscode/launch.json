@@ -9,6 +9,20 @@
             "name": "AppBanca",
             "request": "launch",
             "mainClass": "aula_12.composicao.AppBanca",
+            "projectName": "java-poo_a8c37407"
+        },
+        {
+            "type": "java",
+            "name": "ProjetoYT",
+            "request": "launch",
+            "mainClass": "cursoemvideo_ex.ProjetoYT",
+            "projectName": "java-poo_a8c37407"
+        },
+        {
+            "type": "java",
+            "name": "AppBanca",
+            "request": "launch",
+            "mainClass": "aula_12.composicao.AppBanca",
             "projectName": "POO - ADS E04_ed95c42f"
         },
         {

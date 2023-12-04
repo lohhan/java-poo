@@ -17,10 +17,10 @@ public class AppBanca {
             }
         }
 
+        revista.removeEdicao(53);
+
         for (Edicao edicao : revista.getListaEdicoes()) {
             System.out.println(edicao);
         }
-
-        revista.reciclaEdicao(53);
     }
 }

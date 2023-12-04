@@ -4,15 +4,23 @@ public class ImpressoraLazer extends Impressora{
     // Atributos
     private char tipo;
     private int temperatura;
-
+    
     // Construtor
-
     public ImpressoraLazer(String modelo, char tipo) {
         super(modelo);
         this.tipo = tipo;
     }
+    
+    // Getters
+    public char getTipo() {
+        return tipo;
+    }
 
-    // Métodos
+    public int getTemperatura() {
+        return temperatura;
+    }
+
+    // Demais Métodos
     public void ajustarTemperatura(int temp) {
         this.temperatura = temp;
     }
@@ -26,4 +34,7 @@ public class ImpressoraLazer extends Impressora{
             this.ajustarTemperatura(0);
         }
     }
+
+
+    
 }

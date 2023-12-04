@@ -10,8 +10,17 @@ public class ImpressoraJatoTinta extends Impressora{
         super(modelo);
         this.numCartuchos = numCartuchos;
     }
+    
+    // Getters
+    public int getNumCartuchos() {
+        return numCartuchos;
+    }
 
-    // Métodos
+    public boolean isCartuchosAlinhados() {
+        return cartuchosAlinhados;
+    }
+
+    // Demais Métodos
     public String alinharCartuchos() throws ExceptionPrinterTurnedOff {
         if(!this.ligada) {
             throw new ExceptionPrinterTurnedOff();
@@ -25,4 +34,7 @@ public class ImpressoraJatoTinta extends Impressora{
     public void ligaDesliga() {
         this.ligada = !this.ligada;
     }
+
+
+
 }

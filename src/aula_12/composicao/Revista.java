@@ -46,26 +46,35 @@ public class Revista {
     }
 
     public void removeEdicao(int numeroEdicao) {
+        Edicao edicaoToRemove = null;
         for (Edicao edicao : listaEdicoes) {
             if (edicao.getNumero() == numeroEdicao) {
-                listaEdicoes.remove(edicao);        
-            } else {
-                System.out.println("Edição não encontrada.");
+                edicaoToRemove = edicao;
+                break;     
             }
+        }
+        if (edicaoToRemove != null) {
+            listaEdicoes.remove(edicaoToRemove);
+        } else {
+            System.out.println("Edição não existente");
         }
     }
     
     public String reciclaEdicao(int numeroEdicao) {
         for (Edicao edicao : listaEdicoes) {
-            if(edicao.getTiragem() == 0) {
-                return "Não houve exemplares para reciclar";
-            } else {
+            if (edicao.getNumero() == numeroEdicao) {
+                if (edicao.obtemReciclagem() == 0) {
+                    return "Não houve exemplares para reciclar";
+                } 
+                if (edicao.isReciclou()) {
+                    return "Edição já reciclada";
+                } 
                 this.reciclagemProduzida += edicao.obtemReciclagem();
-                System.out.println("Reciclagem produzida: " + this.getReciclagemProduzida());
                 edicao.reciclaExemplares();
+                return "Reciclagem realizada";
             }
         }
-        return "Reciclagem realizada";
+        return "Edição não encontrada";
     }
 
     

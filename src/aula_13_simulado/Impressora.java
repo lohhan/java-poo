@@ -7,6 +7,20 @@ public abstract class Impressora implements IEquipamento{
     private String modelo;
     protected boolean ligada;
 
+    // Getters
+    public int getId() {
+        return id;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public boolean isLigada() {
+        return ligada;
+    }
+
+    // Construtor
     public Impressora(String modelo) {
         idCount++;
         this.modelo = modelo;
