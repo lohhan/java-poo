@@ -1,0 +1,168 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "AppBanca",
+            "request": "launch",
+            "mainClass": "aula_12.composicao.AppBanca",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppTrajeto",
+            "request": "launch",
+            "mainClass": "aula_12.agregacao.AppTrajeto",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "tratandoexcecao",
+            "request": "launch",
+            "mainClass": "aula_11.tratandoexcecao",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppConsumo",
+            "request": "launch",
+            "mainClass": "aula_10.AppConsumo",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppCaminhao",
+            "request": "launch",
+            "mainClass": "aula_09.caminhao.AppCaminhao",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppFaculdade",
+            "request": "launch",
+            "mainClass": "exerciciogpt.exercicio_faculdade.AppFaculdade",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppBibliotecaLivro",
+            "request": "launch",
+            "mainClass": "exerciciogpt.AppBibliotecaLivro",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppTermostato",
+            "request": "launch",
+            "mainClass": "me_unidade1.AppTermostato",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AppSalario",
+            "request": "launch",
+            "mainClass": "aula_02.AppSalario",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppCalculadora",
+            "request": "launch",
+            "mainClass": "aula_03.AppCalculadora",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppMassaCorporea",
+            "request": "launch",
+            "mainClass": "aula_03.AppMassaCorporea",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppProduto",
+            "request": "launch",
+            "mainClass": "aula_04.AppProduto",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppIQA",
+            "request": "launch",
+            "mainClass": "aula_05.AppIQA",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppExameGli",
+            "request": "launch",
+            "mainClass": "aula_06.aula_06_exame.AppExameGli",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppExameGliObjetos",
+            "request": "launch",
+            "mainClass": "aula_06.aula_06_exame_tresobjetos.AppExameGliObjetos",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppExameGliArrays",
+            "request": "launch",
+            "mainClass": "aula_06.aula_06_exame_utilizandoarrays.AppExameGliArrays",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppIQA1",
+            "request": "launch",
+            "mainClass": "aula_06.aula_06_iqa.AppIQA1",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppIQA2",
+            "request": "launch",
+            "mainClass": "aula_06.aula_06_iqa_doisobjetos.AppIQA2",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppIQA3",
+            "request": "launch",
+            "mainClass": "aula_06.aula_06_iqa_utilizandoarrays.AppIQA3",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "App01_MinaMinerio",
+            "request": "launch",
+            "mainClass": "aula_07.aula_07_MinaMinerio.App01_MinaMinerio",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppLivraria",
+            "request": "launch",
+            "mainClass": "aula_07.aula_07_livraria.AppLivraria",
+            "projectName": "POO - ADS E04_ed95c42f"
+        },
+        {
+            "type": "java",
+            "name": "AppPneu",
+            "request": "launch",
+            "mainClass": "me_unidade1.AppPneu",
+            "projectName": "POO - ADS E04_ed95c42f"
+        }
+    ]
+}
