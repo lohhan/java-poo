@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Application",
             "request": "launch",
+            "mainClass": "me_unidade2.Application",
+            "projectName": "java-poo_a8c37407"
+        },
+        {
+            "type": "java",
+            "name": "Application",
+            "request": "launch",
             "mainClass": "exception.Account.Application",
             "projectName": "java-poo_a8c37407"
         },
