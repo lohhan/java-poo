@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Application {
 	static Scanner input = new Scanner(System.in);
 
-	static QuestaoMultiplaEscolha questaoME     = null;
-	static QuestaoVerdadeiroFalso questaoVF     = null;
-  //static QuestaoRespostaProporcional questaoRP = null;
+	static QuestaoMultiplaEscolha questaoME = null;
+	static QuestaoVerdadeiroFalso questaoVF = null;
+  	static QuestaoRespostaProporcional questaoRP = null;
 
 
 	public static void main(String[] args) {
@@ -56,91 +56,186 @@ public class Application {
 		input.close();
 	}
 	
+	
+
 	public static void criarQuestaoME() {
-		/*
-		 Criticar se a questão já foi criada. Se sim, informar e retornar ao menu.
-		 Receber o texto do enunciado
-		 Receber os textos dos 3 itens
-		 Receber a letra do item correto
-		 Receber a nota padrão. Tratar as exceções possíveis
-		 Instancia o objeto QuestaoME. Tratar a exceção criada.
-		 Se o objeto foi instanciado, mostrar os dados da questão, conforme modelo do enunciado.
-		*/
+		
+		try {
+			if (questaoME == null) {
 
-        input.nextLine();
-        System.out.print("Texto do Enunciado: ");
-        String enunciado = input.nextLine();
+			input.nextLine();
+			System.out.print("Texto do Enunciado: ");
+			String enunciado = input.nextLine();
 
-        System.out.print("Insira o Item A: ");
-        String itemA = input.nextLine();
+			System.out.print("Insira o Item A: ");
+			String itemA = input.nextLine();
 
-        System.out.print("Insira o Item B: ");
-        String itemB = input.nextLine();
+			System.out.print("Insira o Item B: ");
+			String itemB = input.nextLine();
 
-        System.out.print("Insira o Item C: ");
-        String itemC = input.nextLine();
+			System.out.print("Insira o Item C: ");
+			String itemC = input.nextLine();
 
-        double notaPadrao = 1;
+			System.out.print("Insira o valor da nota padrão: ");
+			double notaPadrao = input.nextDouble();
 
-        System.out.print("Qual a alternativa correta?: ");
-        char alternativaCorreta = input.next().charAt(0);
+			System.out.print("Qual a alternativa correta?: ");
+			char alternativaCorreta = input.next().charAt(0);
+			
+			System.out.println();
+
+			questaoME = new QuestaoMultiplaEscolha(enunciado, itemA, itemB, itemC, notaPadrao, alternativaCorreta);
+			System.out.println(questaoME.toString());
+
+			} else {
+				System.out.println("Questão já criada!");
+			}
+		} catch (AnswerDoesNotExist e) {
+			System.out.println(e.getMessage());
+		}
+		
         
-        System.out.println();
-
-        QuestaoMultiplaEscolha qme = new QuestaoMultiplaEscolha(enunciado, itemA, itemB, itemC, notaPadrao, alternativaCorreta);
-        System.out.println(qme.toString());
 	}
 	
 	public static void criarQuestaoVF() {
-		/*
-		 Criticar se a questão já foi criada. Se sim, informar e retornar ao menu.
-		 Receber o texto do enunciado
-		 Receber os textos dos 3 itens com a resposta correta de cada um dos itens
-		 Receber a nota padrão. Tratar as exceções possíveis
-		 Instancia o objeto QuestaoVF. Tratar a exceção criada.
-		 Se o objeto foi instanciado, mostrar os dados da questão, conforme modelo do enunciado.
-		*/
+	
+		try {
+			if (questaoVF == null) {
+
+			input.nextLine();
+			System.out.print("Texto do Enunciado: ");
+			String enunciado = input.nextLine();
+
+			System.out.print("Insira o Item A: ");
+			String itemA = input.nextLine();
+
+			System.out.print("Valor correto do item A: ");
+			char alternativaCorretaA = input.next().charAt(0);
+
+			input.nextLine();
+			System.out.print("Insira o Item B: ");
+			String itemB = input.nextLine();
+
+			System.out.print("Valor correto do item B: ");
+			char alternativaCorretaB = input.next().charAt(0);
+
+			input.nextLine();
+			System.out.print("Insira o Item C: ");
+			String itemC = input.nextLine();
+			
+			System.out.print("Valor correto do item C: ");
+			char alternativaCorretaC = input.next().charAt(0);
+
+			System.out.print("Insira o valor da nota padrão: ");
+			double notaPadrao = input.nextDouble();
+			
+			System.out.println();
+
+			questaoVF = new QuestaoVerdadeiroFalso(enunciado, itemA, itemB, itemC, notaPadrao, alternativaCorretaA, alternativaCorretaB, alternativaCorretaC);
+			System.out.println(questaoVF.toString());
+
+			} else {
+				System.out.println("Questão já criada!");
+			}
+		} catch (AnswerDoesNotExist e) {
+			System.out.println(e.getMessage());
+		}
+		
+		
 	}
 
 	public static void criarQuestaoRP() {
-		/*
-		 Criticar se a questão já foi criada. Se sim, informar e retornar ao menu.
-		 Receber o texto do enunciado
-		 Receber os textos dos 3 itens com o percentual de cada um dos itens
-		 Receber a nota padrão. Tratar as exceções possíveis
-		 Instancia o objeto QuestaoRP. Tratar a exceção criada.
-		 Se o objeto foi instanciado, mostrar os dados da questão, conforme modelo do enunciado.
-		*/
+	
+		try {
+			if (questaoRP == null) {
+
+			input.nextLine();
+			System.out.print("Texto do Enunciado: ");
+			String enunciado = input.nextLine();
+
+			System.out.print("Insira o Item A: ");
+			String itemA = input.nextLine();
+
+			System.out.print("Percentual do item A: ");
+			int percentualA = input.nextInt();
+
+			input.nextLine();
+			System.out.print("Insira o Item B: ");
+			String itemB = input.nextLine();
+
+			System.out.print("Valor correto do item B: ");
+			int percentualB = input.nextInt();
+
+			input.nextLine();
+			System.out.print("Insira o Item C: ");
+			String itemC = input.nextLine();
+			
+			System.out.print("Valor correto do item C: ");
+			int percentualC = input.nextInt();
+
+			System.out.print("\nInsira o valor da nota padrão: ");
+			double notaPadrao = input.nextDouble();
+			
+			System.out.println();
+
+			questaoRP = new QuestaoRespostaProporcional(enunciado, itemA, itemB, itemC, notaPadrao, percentualA, percentualB, percentualC);
+			System.out.println(questaoRP.toString());
+
+			} else {
+				System.out.println("Questão já criada!");
+			}
+		} catch (AnswerDoesNotExist e) {
+			System.out.println(e.getMessage());
+		}
+		
+		
 	}
 	
 	public static void responderQuestaoME() {
-		/*
-		 Criticar se a questão já foi criada. Se não, informar e retornar ao menu.
-		 Mostrar a questão
-		 Receber apenas as letras A, B ou C correspondente ao item considera como correto
-		 Marca a questão
-		 Calcular e mostrar a nota obtida.
-		*/
+	
+		if (questaoME != null) {
+			System.out.println("Escolha uma alternativa para responder a questão: ");
+			char letraItem = input.next().charAt(0);
+			questaoME.responder(letraItem);
+		} else {
+			System.out.println("Questão não criada!!");
+		}
+		
+		
 	}	
 
 	public static void responderQuestaoVF() {
-		/*
-		 Criticar se a questão já foi criada. Se não, informar e retornar ao menu.
-		 Mostrar a questão
-		 Receber apenas as letras V ou F para cada um dos itens
-		 Marca a questão
-		 Calcular e mostrar a nota obtida.
-		*/
+
+		if (questaoVF != null) {
+			System.out.print("Alternativa A (V ou F): ");
+			char respostaSelecionada = input.next().charAt(0);
+			questaoVF.responder('A', respostaSelecionada);
+
+			System.out.print("Alternativa B (V ou F): ");
+			respostaSelecionada = input.next().charAt(0);
+			questaoVF.responder('B', respostaSelecionada);
+
+			System.out.print("Alternativa C (V ou F): ");
+			respostaSelecionada = input.next().charAt(0);
+			questaoVF.responder('C', respostaSelecionada);
+		} else {
+			System.out.println("Questão não criada!!");
+		}
+
+			
+		
 	}	
 
 	public static void responderQuestaoRP() {
-		/*
-		 Criticar se a questão já foi criada. Se não, informar e retornar ao menu.
-		 Mostrar a questão
-		 Receber apenas as letras A, B ou C correspondente ao item considero como correto
-		 Marca a questão
-		 Calcular e mostrar a nota obtida.
-		*/
+
+		if (questaoRP != null) {
+			System.out.println("Escolha uma alternativa para responder a questão: ");
+			char letraItem = input.next().charAt(0);
+			questaoRP.responder(letraItem);
+		} else {
+			System.out.println("Questão não criada!!");
+		}
+
 	}	
 	
 }
