@@ -10,10 +10,10 @@ public class QuestaoMultiplaEscolha extends QuestaoObjetiva {
             char itemCorreto) {
 
         super(enunciado, itemA, itemB, itemC, notaPadrao);
-        if (this.itemCorreto != 'A' || this.itemCorreto != 'B' || this.itemCorreto != 'C') {
-            throw new AnswerDoesNotExist("Resposta indicada não existe!!");
-        } else {
+        if (itemCorreto == 'A' || itemCorreto == 'B' || itemCorreto == 'C') {
             this.itemCorreto = itemCorreto;
+        } else {
+            throw new AnswerDoesNotExist("Resposta indicada não existe!!");
         }
         
     }
